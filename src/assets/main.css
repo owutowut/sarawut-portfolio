@@ -6,14 +6,19 @@
   font-family: "Poppins", sans-serif;
 }
 
-p {
-  @apply text-gray-100;
+h1 {
+  @apply text-gradient-accent text-5xl font-bold uppercase;
 }
 
-span {
-  @apply text-indigoLight;
+h2 {
+  @apply text-3xl font-bold uppercase;
 }
 
-.hover-scale {
-  @apply hover:scale-105 duration-300 transition-transform cursor-default;
+@layer utilities {
+  .hover-scale {
+    @apply transform transition duration-300 ease-in-out hover:scale-105 cursor-default;
+  }
+  .text-gradient-accent {
+    @apply bg-gradient-accent-primary bg-clip-text text-transparent;
+  }
 }
