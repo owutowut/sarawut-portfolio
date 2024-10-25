@@ -1,10 +1,10 @@
 <template>
   <div class="bg-black text-gray-100">
     <Navbar />
-    <main class="py-[4rem] flex justify-center items-center">
+    <main class="mt-[65px] py-[2rem] flex justify-center items-center">
       <div class="space-y-[3rem] max-w-[80vw]">
         <!-- profile -->
-        <div class="flex justify-start items-center space-x-[2rem]">
+        <div class="flex justify-start items-center space-x-[0.6rem]">
           <div class="hover-scale relative w-[16rem] h-[16rem] overflow-hidden rounded-2xl border-2 border-gray-400">
             <img src="./assets/imgs/profile.jpg" alt="Profile Image" class="absolute top-5 object-cover scale-150" />
           </div>
@@ -23,7 +23,7 @@
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-[2rem]">
+        <div class="grid grid-cols-2 gap-[0.6rem]">
           <!-- education -->
           <div class="space-y-[1.5rem]">
             <h2>
@@ -91,33 +91,68 @@
         <!-- skills -->
         <div class="space-y-[1.5rem]">
           <h2>SKILLS</h2>
-          <swiper :slides-per-view="10" :free-mode="true" :modules="modules" :loop="true" :autoplay="{
+          <Swiper :slides-per-view="10" :space-between="-5" :free-mode="true" :modules="modules" :loop="true" :autoplay="{
             delay: 2000,
             disableOnInteraction: false,
           }">
-            <swiper-slide><img src="./assets/imgs/skills/react.png" alt="react" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/nextjs.png" alt="nextjs" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/vue.png" alt="vue" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/nuxtjs.png" alt="nuxtjs" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/tailwind.png" alt="tailwind" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/bootstrap.png" alt="bootstrap" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/html.png" alt="html" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/js.png" alt="js" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/typescript.png" alt="typescript" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/jquery.png" alt="jquery" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/pug.png" alt="pug" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/nodejs.png" alt="node js" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/adonisjs.png" alt="adonis js" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/ex.png" alt="express js" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/postgresql.png" alt="postgresql" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/mongodb.png" alt="mongodb" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/mysql.png" alt="mysql" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/firebase.png" alt="firebase" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/git.png" alt="git" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/figma.png" alt="figma" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/adobexd.png" alt="adobexd" loading="lazy"></swiper-slide>
-            <swiper-slide><img src="./assets/imgs/skills/postman.png" alt="postman" loading="lazy"></swiper-slide>
-          </swiper>
+            <SwiperSlide v-for="(value, index) in skills" :key="index">
+              <img :src="`./src/assets/imgs/skills/${value}.png`" :alt="value" loading="lazy">
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div class="grid grid-cols-2 gap-[0.6rem]">
+          <!-- work experience -->
+          <div class="space-y-[1.5rem]">
+            <h2>
+              Work Experience
+            </h2>
+            <div class="flex flex-wrap gap-2">
+              <div v-for="(value, index) in workExperience" :key="index"
+                class="hover-scale bg-blackMute rounded-lg px-6 py-5">
+                <span class="text-blue-400 font-semibold text-lg">
+                  {{ value.year }}
+                </span>
+                <p class="text-gray-100 font-semibold text-md">
+                  {{ value.company }} <br>
+                </p>
+                <p class="text-gray-100 text-md">
+                  {{ value.position }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- contact -->
+          <div id="contact" class="text-center bg-gray-100 text-blackMute space-y-[1.5rem] p-8 rounded-xl">
+            <h2>
+              contact
+            </h2>
+            <div class="space-y-[2rem]">
+              <div class="space-x-[0.6rem] flex items-center">
+                <div class="flex justify-center items-center">
+                  <img src="./assets/imgs/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
+                </div>
+                <div class="hover-scale bg-blackMute text-gray-100 rounded-lg p-2 w-fit h-fit">
+                  <span>062-741-3716</span>
+                </div>
+              </div>
+              <div class="space-x-[0.6rem] flex items-center">
+                <div class="flex justify-center items-center">
+                  <img src="./assets/imgs/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
+                </div>
+                <div class="hover-scale bg-blackMute text-gray-100 rounded-lg p-2 w-fit h-fit">
+                  <span>sarawut_bm@outlook.com</span>
+                </div>
+              </div>
+              <div class="space-x-[0.6rem] flex items-center">
+                <div class="flex justify-center items-center">
+                  <img src="./assets/imgs/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
+                </div>
+                <div class="hover-scale bg-blackMute text-gray-100 rounded-lg p-2 w-fit h-fit">
+                  <span>www.github.com/owutowut</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -129,7 +164,7 @@
 import Navbar from './components/layouts/Navbar.vue'
 import Footer from './components/layouts/Footer.vue'
 
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -138,10 +173,34 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { FreeMode, Autoplay } from 'swiper/modules';
 
 const modules = ref([FreeMode, Autoplay]);
-
-onMounted(() => {
-  document.title = "Sarawut Bunmee - Portfolio";
-});
+const skills = ref(['nextjs', 'vue', 'nuxtjs', 'tailwind', 'bootstrap', 'html', 'js', 'typescript', 'jquery', 'pug', 'nodejs', 'adonisjs', 'ex', 'postgresql', 'mongodb', 'mysql', 'firebase', 'git', 'figma', 'adobexd', 'postman']);
+const workExperience = ref([
+  {
+    company: 'OneDee Solution',
+    position: 'Front-End Developer',
+    year: '2023 - 2024'
+  },
+  {
+    company: 'Never Sleep',
+    position: 'Front-End Developer',
+    year: '2022 - 2023'
+  },
+  {
+    company: 'Zezembly',
+    position: 'Front-End Developer ( Internship )',
+    year: '2022'
+  },
+  {
+    company: 'Owl Day House',
+    position: 'Full Stack Developer ( Internship )',
+    year: '2022'
+  },
+  {
+    company: 'OneDee Solution',
+    position: 'Front-End Developer ( Internship )',
+    year: '2021'
+  },
+]);
 
 </script>
 

@@ -4,8 +4,11 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 h1 {
   @apply text-gradient-accent text-5xl font-bold uppercase;
 }
