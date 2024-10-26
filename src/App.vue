@@ -6,7 +6,7 @@
         <!-- profile -->
         <div class="flex justify-start items-center space-x-[0.6rem]">
           <div class="hover-scale relative w-[16rem] h-[16rem] overflow-hidden rounded-2xl border-2 border-gray-400">
-            <img src="./assets/imgs/profile.jpg" alt="Profile Image" class="absolute top-5 object-cover scale-150" />
+            <img src="/profile.jpg" alt="Profile Image" class="absolute top-5 object-cover scale-150" />
           </div>
           <div class="space-y-4">
             <h1>
@@ -96,7 +96,7 @@
             disableOnInteraction: false,
           }">
             <SwiperSlide v-for="(value, index) in skills" :key="index">
-              <img :src="`./src/assets/imgs/skills/${value}.png`" :alt="value" loading="lazy">
+              <img :src="`/imgs/skills/${value}.png`" :alt="value" loading="lazy">
             </SwiperSlide>
           </Swiper>
         </div>
@@ -129,7 +129,7 @@
             <div class="space-y-[2rem]">
               <div class="space-x-[0.6rem] flex items-center">
                 <div class="flex justify-center items-center">
-                  <img src="./assets/imgs/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
+                  <img src="/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
                 </div>
                 <div class="hover-scale bg-blackMute text-gray-100 rounded-lg p-2 w-fit h-fit">
                   <span>062-741-3716</span>
@@ -137,7 +137,7 @@
               </div>
               <div class="space-x-[0.6rem] flex items-center">
                 <div class="flex justify-center items-center">
-                  <img src="./assets/imgs/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
+                  <img src="/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
                 </div>
                 <div class="hover-scale bg-blackMute text-gray-100 rounded-lg p-2 w-fit h-fit">
                   <span>sarawut_bm@outlook.com</span>
@@ -145,7 +145,7 @@
               </div>
               <div class="space-x-[0.6rem] flex items-center">
                 <div class="flex justify-center items-center">
-                  <img src="./assets/imgs/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
+                  <img src="/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
                 </div>
                 <div class="hover-scale bg-blackMute text-gray-100 rounded-lg p-2 w-fit h-fit">
                   <span>www.github.com/owutowut</span>
@@ -164,7 +164,7 @@
 import Navbar from './components/layouts/Navbar.vue'
 import Footer from './components/layouts/Footer.vue'
 
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -174,7 +174,7 @@ import { FreeMode, Autoplay } from 'swiper/modules';
 
 const modules = ref([FreeMode, Autoplay]);
 const skills = ref(['nextjs', 'vue', 'nuxtjs', 'tailwind', 'bootstrap', 'html', 'js', 'typescript', 'jquery', 'pug', 'nodejs', 'adonisjs', 'ex', 'postgresql', 'mongodb', 'mysql', 'firebase', 'git', 'figma', 'adobexd', 'postman']);
-const workExperience = ref([
+const workExperience = reactive([
   {
     company: 'OneDee Solution',
     position: 'Front-End Developer',
