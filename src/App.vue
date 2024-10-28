@@ -1,106 +1,130 @@
 <template>
   <div class="bg-black text-gray-100">
     <Navbar />
-    <main class="mt-[65px] py-[2rem] flex justify-center items-center">
-      <div class="space-y-[3rem] max-w-[80vw]">
-        <!-- profile -->
-        <div class="flex justify-start items-center space-x-[0.6rem]">
-          <div class="hover-scale relative w-[16rem] h-[16rem] overflow-hidden rounded-2xl border-2 border-gray-400">
-            <img src="/profile.jpg" alt="Profile Image" class="absolute top-5 object-cover scale-150" />
+    <main class="mt-[65px] pt-[2rem]">
+      <div class="flex justify-center items-center mb-[7rem]">
+        <div class="space-y-[3rem] max-w-[80vw]">
+          <!-- profile -->
+          <div class="flex justify-start items-center space-x-[2rem]">
+            <div class="hover-scale relative w-[16rem] h-[16rem] overflow-hidden rounded-2xl border-2 border-gray-400">
+              <img src="/profile.jpg" alt="Profile Image" class="absolute top-5 object-cover scale-150" />
+            </div>
+            <div class="space-y-4">
+              <h1>
+                Sarawut Bunmee
+              </h1>
+              <h2 class="text-xl text-gray-400">
+                Front-End Developer
+              </h2>
+              <p>
+                Passionate Front-End Developer with experience in creating user-friendly web applications. <br>
+                Proficient in HTML, CSS, JavaScript, Vue, Nuxt, React and Next.js.
+                Eager to learn new skills and contribute effectively to team projects, <br>
+                delivering high-quality solutions that meet user needs.
+              </p>
+            </div>
           </div>
-          <div class="space-y-4">
-            <h1>
-              Sarawut Bunmee
-            </h1>
-            <h2 class="text-xl text-gray-400">
-              Front-End Developer
-            </h2>
-            <p>
-              Passionate Front-End Developer with experience in creating user-friendly web applications. <br>
-              Proficient in HTML, CSS, JavaScript, Vue, Nuxt, React and Next.js.
-              Eager to learn new skills and contribute effectively to team projects, <br>
-              delivering high-quality solutions that meet user needs.
-            </p>
-          </div>
-        </div>
-        <div class="grid grid-cols-2 gap-[0.6rem]">
-          <!-- education -->
-          <div class="space-y-[1.5rem]">
-            <h2>
-              education
-            </h2>
-            <div class="flex space-x-[0.6rem]">
-              <div class="hover-scale bg-blackMute rounded-lg px-6 py-5 w-fit">
-                <span class="text-blue-400 font-semibold text-lg">
-                  2019
-                </span>
-                <p class="text-gray-100 font-semibold text-md">
-                  University of Phayao <br>
-                </p>
-                <p class="text-gray-100 text-md">
-                  ( Bachelor of Engineering )
-                </p>
+          <div class="grid grid-cols-2 gap-[0.6rem]">
+            <!-- education -->
+            <div class="space-y-[1.5rem]">
+              <h2>
+                education
+              </h2>
+              <div class="flex space-x-[0.6rem]">
+                <div class="hover-scale bg-blackMute rounded-lg px-6 py-5 w-fit">
+                  <span class="text-blue-400 font-semibold text-lg">
+                    2019
+                  </span>
+                  <p class="text-gray-100 font-semibold text-md">
+                    University of Phayao <br>
+                  </p>
+                  <p class="text-gray-100 text-md">
+                    ( Bachelor of Engineering )
+                  </p>
+                </div>
+                <div class="hover-scale bg-blackMute rounded-lg px-6 py-5 w-fit">
+                  <span class="text-blue-400 font-semibold text-lg">
+                    2013
+                  </span>
+                  <p class="text-gray-100 font-semibold text-md">
+                    Maesai Prasitsart School <br>
+                  </p>
+                  <p class="text-gray-100 text-md">
+                    ( Science and Mathematics )
+                  </p>
+                </div>
               </div>
-              <div class="hover-scale bg-blackMute rounded-lg px-6 py-5 w-fit">
-                <span class="text-blue-400 font-semibold text-lg">
-                  2013
-                </span>
-                <p class="text-gray-100 font-semibold text-md">
-                  Maesai Prasitsart School <br>
-                </p>
-                <p class="text-gray-100 text-md">
-                  ( Science and Mathematics )
-                </p>
+            </div>
+            <!-- hobbies and interests -->
+            <div class="space-y-[1.5rem]">
+              <h2>
+                hobbies and
+                interests
+              </h2>
+              <div class="flex flex-wrap gap-[0.6rem]">
+                <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
+                  <FontAwesomeIcon icon="fas fa-code" class="text-blue-400" />
+                  <span>Learning New Programming Skills</span>
+                </div>
+                <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
+                  <FontAwesomeIcon icon="fas fa-podcast" class="text-blue-400" />
+                  <span>Listening to Podcasts</span>
+                </div>
+                <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
+                  <FontAwesomeIcon icon="fas fa-microchip" class="text-blue-400" />
+                  <span>Reading Tech Articles</span>
+                </div>
+                <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
+                  <FontAwesomeIcon icon="fas fa-gamepad" class="text-blue-400" />
+                  <span>Gaming</span>
+                </div>
+                <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
+                  <FontAwesomeIcon icon="fas fa-guitar" class="text-blue-400" />
+                  <span>Playing an instrument</span>
+                </div>
+                <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
+                  <FontAwesomeIcon icon="fas fa-music" class="text-blue-400" />
+                  <span>Listening to Music</span>
+                </div>
               </div>
             </div>
           </div>
-          <!-- hobbies and interests -->
+          <!-- skills -->
           <div class="space-y-[1.5rem]">
-            <h2>
-              hobbies and
-              interests
-            </h2>
-            <div class="flex flex-wrap gap-[0.6rem]">
-              <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
-                <FontAwesomeIcon icon="fas fa-code" class="text-blue-400" />
-                <span>Learning New Programming Skills</span>
-              </div>
-              <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
-                <FontAwesomeIcon icon="fas fa-podcast" class="text-blue-400" />
-                <span>Listening to Podcasts</span>
-              </div>
-              <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
-                <FontAwesomeIcon icon="fas fa-microchip" class="text-blue-400" />
-                <span>Reading Tech Articles</span>
-              </div>
-              <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
-                <FontAwesomeIcon icon="fas fa-gamepad" class="text-blue-400" />
-                <span>Gaming</span>
-              </div>
-              <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
-                <FontAwesomeIcon icon="fas fa-guitar" class="text-blue-400" />
-                <span>Playing an instrument</span>
-              </div>
-              <div class="hover-scale bg-blackMute rounded-lg px-4 py-2 w-fit space-x-2">
-                <FontAwesomeIcon icon="fas fa-music" class="text-blue-400" />
-                <span>Listening to Music</span>
-              </div>
-            </div>
+            <h2>SKILLS</h2>
+            <Swiper :slides-per-view="10" :space-between="-5" :free-mode="true" :modules="modules" :loop="true"
+              :autoplay="{
+                delay: 2000,
+                disableOnInteraction: false,
+              }">
+              <SwiperSlide v-for="(value, index) in skills" :key="index">
+                <img :src="`/imgs/skills/${value}.png`" :alt="value" loading="lazy">
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
-        <!-- skills -->
-        <div class="space-y-[1.5rem]">
-          <h2>SKILLS</h2>
-          <Swiper :slides-per-view="10" :space-between="-5" :free-mode="true" :modules="modules" :loop="true" :autoplay="{
-            delay: 2000,
-            disableOnInteraction: false,
-          }">
-            <SwiperSlide v-for="(value, index) in skills" :key="index">
-              <img :src="`/imgs/skills/${value}.png`" :alt="value" loading="lazy">
-            </SwiperSlide>
-          </Swiper>
+        <div id="contact"></div>
+      </div>
+      <div class="bg-[#161616] flex justify-center items-center relative py-[8rem]">
+        <!-- contact -->
+        <div class="absolute top-[-2rem] left-0 flex flex-wrap justify-center gap-4 w-full">
+          <a href="tel:062-741-3716"
+            class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
+            <FontAwesomeIcon icon="fas fa-phone" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
+            <p class="lg:text-[1.3rem] sm:text-[1rem] ">062-741-3716</p>
+          </a>
+          <a href="mailto:sarawut_bm@outlook.com"
+            class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
+            <FontAwesomeIcon icon="fas fa-envelope" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
+            <p class="lg:text-[1.3rem] sm:text-[1rem] ">sarawut_bm@outlook.com</p>
+          </a>
+          <a href="tel:062-741-3716"
+            class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
+            <FontAwesomeIcon icon="fas fa-code" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
+            <p class="lg:text-[1.3rem] sm:text-[1rem] ">www.github.com/owutowut</p>
+          </a>
         </div>
-        <div class="grid grid-cols-2 gap-[0.6rem]">
+        <div class="w-full max-w-[80vw] space-y-[3rem]">
           <!-- work experience -->
           <div class="space-y-[1.5rem]">
             <h2>
@@ -121,34 +145,57 @@
               </div>
             </div>
           </div>
-          <!-- contact -->
-          <div id="contact" class="text-center bg-gray-100 text-blackMute space-y-[1.5rem] p-8 rounded-xl">
+          <!-- projects -->
+          <div id="projects" class="space-y-[1.5rem]">
             <h2>
-              contact
+              Projects
             </h2>
-            <div class="space-y-[2rem]">
-              <div class="space-x-[0.6rem] flex items-center">
-                <div class="flex justify-center items-center">
-                  <img src="/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
-                </div>
-                <div class="hover-scale bg-blackMute text-gray-100 rounded-lg p-2 w-fit h-fit">
-                  <span>062-741-3716</span>
-                </div>
-              </div>
-              <div class="space-x-[0.6rem] flex items-center">
-                <div class="flex justify-center items-center">
-                  <img src="/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
-                </div>
-                <div class="hover-scale bg-blackMute text-gray-100 rounded-lg p-2 w-fit h-fit">
-                  <span>sarawut_bm@outlook.com</span>
-                </div>
-              </div>
-              <div class="space-x-[0.6rem] flex items-center">
-                <div class="flex justify-center items-center">
-                  <img src="/profile.jpg" alt="Profile Image" class="w-[6rem] h-[6rem]" />
-                </div>
-                <div class="hover-scale bg-blackMute text-gray-100 rounded-lg p-2 w-fit h-fit">
-                  <span>www.github.com/owutowut</span>
+            <div class="grid grid-cols-4 gap-4">
+              <div v-for="(value, index) in 8" :key="index"
+                class="relative w-full lg:hover:mt-[-10px] transition-all duration-700 sm:flex sm:justify-center">
+                <div class="group text-center text-white lg:w-full sm:w-full h-full relative">
+                  <div
+                    class="z-[2] absolute top-0 left-0 sec6card-inner cursor-pointer group rounded-[10px] transition-all duration-[1s]">
+                    <div
+                      class="z-[2] absolute top-0 left-0 sec6card-inner cursor-pointer group rounded-[10px] transition-all duration-[1s]">
+                    </div>
+                  </div>
+                  <div class="z-[1] cursor-pointer relative rounded-[10px] overflow-y-hidden">
+                    <img loading="lazy" class="h-[260px] w-full object-cover" :src="`/imgs/projects/${value}.png`"
+                      alt="sarawut portfolio projects" />
+                    <p v-if="value == 1"
+                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
+                      เว็บไซต์บริษัทก่อสร้างถนนสะพานและอุโมงค์
+                    </p>
+                    <p v-if="value == 2"
+                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
+                      เว็บประกาศ ขาย เช่า บ้าน ที่ดิน ภาคเหนือ
+                    </p>
+                    <p v-if="value == 3"
+                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
+                      ระบบจัดการข้อมูลพนักงาน
+                    </p>
+                    <p v-if="value == 4"
+                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
+                      ระบบบันทึกข้อมูลการเงิน
+                    </p>
+                    <p v-if="value == 5"
+                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
+                      เว็บไซต์บริษัทรับออกแบบและการตลาดออนไลน์
+                    </p>
+                    <p v-if="value == 6"
+                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
+                      ระบบจัดการข้อมูลบัญชีบริษัท
+                    </p>
+                    <p v-if="value == 7"
+                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
+                      เว็บไซต์รับทำเว็บไซต์และออกแบบเว็บไซต์
+                    </p>
+                    <p v-if="value == 8"
+                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
+                      เว็บไซต์บริษัทออกแบบพร้อมก่อสร้าง
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
