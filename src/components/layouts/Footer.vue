@@ -1,6 +1,6 @@
 <template>
   <footer class="h-full w-full flex justify-center bg-[#000]">
-    <div class="max-w-[80vw] h-full w-full flex items-center space-x-10 py-[3rem]">
+    <div class="lg:flex lg:space-x-10 lg:space-y-0 sm:space-y-4 max-w-[80vw] h-full w-full items-center py-[3rem]">
       <div>
         <h1 class="hover-scale ">
           <a href="#">Sarawut Bunmee</a>

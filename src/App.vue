@@ -1,12 +1,13 @@
 <template>
-  <div class="bg-black text-gray-100">
+  <div class="bg-black text-gray-100 overflow-hidden">
     <Navbar />
-    <main class="mt-[65px] pt-[2rem]">
-      <div class="flex justify-center items-center mb-[7rem]">
+    <main class="mt-[65px] pt-[2.5rem]">
+      <div class="flex justify-center items-center xl:mb-[6rem] lg:mb-[4rem] md:mb-[4rem] sm:mb-[3rem]">
         <div class="space-y-[3rem] max-w-[80vw]">
           <!-- profile -->
-          <div class="flex justify-start items-center space-x-[2rem]">
-            <div class="hover-scale relative w-[16rem] h-[16rem] overflow-hidden rounded-2xl border-2 border-gray-400">
+          <div class="md:flex md:space-x-[2rem] md:space-y-0 sm:space-y-8 justify-start items-center">
+            <div
+              class="hover-scale relative xl:w-[16rem] xl:h-[16rem] lg:w-2/3 lg:h-[20rem] md:w-full md:h-[18rem] sm:w-full sm:h-[24rem] overflow-hidden rounded-2xl border-2 border-gray-400">
               <img src="/profile.jpg" alt="Profile Image" class="absolute top-5 object-cover scale-150" />
             </div>
             <div class="space-y-4">
@@ -24,13 +25,13 @@
               </p>
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-[0.6rem]">
+          <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-[0.6rem] md:space-y-0 sm:space-y-[2rem]">
             <!-- education -->
             <div class="space-y-[1.5rem]">
               <h2>
                 education
               </h2>
-              <div class="flex space-x-[0.6rem]">
+              <div class="flex flex-wrap gap-[0.6rem]">
                 <div class="hover-scale bg-blackMute rounded-lg px-6 py-5 w-fit">
                   <span class="text-blue-400 font-semibold text-lg">
                     2019
@@ -96,7 +97,8 @@
               :autoplay="{
                 delay: 2000,
                 disableOnInteraction: false,
-              }">
+              }"
+              :breakpoints="{ 1440: { slidesPerView: 10 }, 1024: { slidesPerView: 7 }, 768: { slidesPerView: 5 }, 425: { slidesPerView: 3 } }">
               <SwiperSlide v-for="(value, index) in skills" :key="index">
                 <img :src="`/imgs/skills/${value}.png`" :alt="value" loading="lazy">
               </SwiperSlide>
@@ -105,26 +107,32 @@
         </div>
         <div id="contact"></div>
       </div>
-      <div class="bg-[#161616] flex justify-center items-center relative py-[8rem]">
+      <div
+        class="bg-[#161616] flex justify-center items-center relative xl:py-[6rem] lg:py-[4rem] md:py-[4rem] sm:py-[3rem]">
         <!-- contact -->
-        <div class="absolute top-[-2rem] left-0 flex flex-wrap justify-center gap-4 w-full">
-          <a href="tel:062-741-3716"
-            class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
-            <FontAwesomeIcon icon="fas fa-phone" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
-            <p class="lg:text-[1.3rem] sm:text-[1rem] ">062-741-3716</p>
-          </a>
-          <a href="mailto:sarawut_bm@outlook.com"
-            class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
-            <FontAwesomeIcon icon="fas fa-envelope" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
-            <p class="lg:text-[1.3rem] sm:text-[1rem] ">sarawut_bm@outlook.com</p>
-          </a>
-          <a href="tel:062-741-3716"
-            class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
-            <FontAwesomeIcon icon="fas fa-code" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
-            <p class="lg:text-[1.3rem] sm:text-[1rem] ">www.github.com/owutowut</p>
-          </a>
-        </div>
         <div class="w-full max-w-[80vw] space-y-[3rem]">
+          <div class="space-y-[1.5rem]">
+            <h2 class="xl:hidden">
+              Contact
+            </h2>
+            <div class="xl:absolute xl:top-[-3.5rem] xl:left-0 xl:justify-center flex flex-wrap w-full gap-4">
+              <a href="tel:062-741-3716"
+                class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
+                <FontAwesomeIcon icon="fas fa-phone" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
+                <p class="lg:text-[1.3rem] sm:text-[1rem] ">062-741-3716</p>
+              </a>
+              <a href="mailto:sarawut_bm@outlook.com"
+                class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
+                <FontAwesomeIcon icon="fas fa-envelope" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
+                <p class="lg:text-[1.3rem] sm:text-[1rem] ">sarawut_bm@outlook.com</p>
+              </a>
+              <a href="tel:062-741-3716"
+                class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
+                <FontAwesomeIcon icon="fas fa-code" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
+                <p class="lg:text-[1.3rem] sm:text-[1rem] ">www.github.com/owutowut</p>
+              </a>
+            </div>
+          </div>
           <!-- work experience -->
           <div class="space-y-[1.5rem]">
             <h2>
@@ -150,7 +158,7 @@
             <h2>
               Projects
             </h2>
-            <div class="grid grid-cols-4 gap-4">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
               <div v-for="(value, index) in 8" :key="index"
                 class="relative w-full lg:hover:mt-[-10px] transition-all duration-700 sm:flex sm:justify-center">
                 <div class="group text-center text-white lg:w-full sm:w-full h-full relative">
@@ -161,8 +169,8 @@
                     </div>
                   </div>
                   <div class="z-[1] cursor-pointer relative rounded-[10px] overflow-y-hidden">
-                    <img loading="lazy" class="h-[260px] w-full object-cover" :src="`/imgs/projects/${value}.png`"
-                      alt="sarawut portfolio projects" />
+                    <img loading="lazy" class="xl:h-[260px] lg:h-[200px] md:h-[240px] sm:h-[280px] w-full object-cover"
+                      :src="`/imgs/projects/${value}.png`" alt="sarawut portfolio projects" />
                     <p v-if="value == 1"
                       class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
                       เว็บไซต์บริษัทก่อสร้างถนนสะพานและอุโมงค์

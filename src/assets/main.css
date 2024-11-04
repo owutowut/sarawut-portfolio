@@ -25,3 +25,23 @@ h2 {
     @apply bg-gradient-accent-primary bg-clip-text text-transparent;
   }
 }
+
+@media (min-width: 768px) {
+  h1 {
+    @apply text-gradient-accent text-4xl font-bold uppercase;
+  }
+
+  h2 {
+    @apply text-2xl font-bold uppercase;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+}
