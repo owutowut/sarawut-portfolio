@@ -126,7 +126,7 @@
                 <FontAwesomeIcon icon="fas fa-envelope" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
                 <p class="lg:text-[1.3rem] sm:text-[1rem] ">sarawut_bm@outlook.com</p>
               </a>
-              <a href="tel:062-741-3716"
+              <a href="https://www.github.com/owutowut" target="_blank"
                 class="cursor-default hover:scale-105 duration-500 p-[1.5rem] gap-2 flex justify-center bg-blackMute border-b-2 border-blue-400 text-center h-fit rounded-2xl">
                 <FontAwesomeIcon icon="fas fa-code" class="text-[1rem] p-2 rounded-full border-blue-400 border-2" />
                 <p class="lg:text-[1.3rem] sm:text-[1rem] ">www.github.com/owutowut</p>
@@ -169,7 +169,7 @@
                     </div>
                   </div>
                   <div class="z-[1] cursor-pointer relative rounded-[10px] overflow-y-hidden">
-                    <img loading="lazy" class="xl:h-[260px] lg:h-[200px] md:h-[240px] sm:h-[280px] w-full object-cover"
+                    <img loading="lazy" class="xl:h-[240px] lg:h-[180px] md:h-[240px] sm:h-[280px] w-full object-cover"
                       :src="`/imgs/projects/${value}.png`" alt="sarawut portfolio projects" />
                     <p v-if="value == 1"
                       class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
@@ -230,6 +230,11 @@ import { FreeMode, Autoplay } from 'swiper/modules';
 const modules = ref([FreeMode, Autoplay]);
 const skills = ref(['nextjs', 'vue', 'nuxtjs', 'tailwind', 'bootstrap', 'html', 'js', 'typescript', 'jquery', 'pug', 'nodejs', 'adonisjs', 'ex', 'postgresql', 'mongodb', 'mysql', 'firebase', 'git', 'figma', 'adobexd', 'postman']);
 const workExperience = reactive([
+  {
+    company: 'Biscuit Studio',
+    position: 'Front-End Developer',
+    year: '2024'
+  },
   {
     company: 'OneDee Solution',
     position: 'Front-End Developer',
