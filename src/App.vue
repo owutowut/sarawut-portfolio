@@ -1,13 +1,13 @@
 <template>
   <div class="bg-black text-gray-100 overflow-hidden">
     <Navbar />
-    <main class="mt-[65px] pt-[2.5rem]">
+    <main class="md:mt-[4.5rem] sm:mt-[6rem] pt-[2.5rem]">
       <div class="flex justify-center items-center xl:mb-[6rem] lg:mb-[4rem] md:mb-[4rem] sm:mb-[3rem]">
         <div class="space-y-[3rem] max-w-[80vw]">
           <!-- profile -->
           <div class="md:flex md:space-x-[2rem] md:space-y-0 sm:space-y-8 justify-start items-center">
             <div
-              class="hover-scale relative xl:w-[16rem] xl:h-[16rem] lg:w-2/3 lg:h-[20rem] md:w-full md:h-[18rem] sm:w-full sm:h-[24rem] overflow-hidden rounded-2xl border-2 border-gray-400">
+              class="hover-scale relative xl:w-[16rem] xl:h-[16rem] lg:w-2/3 lg:h-[20rem] md:h-[18rem] sm:h-[24rem] w-full overflow-hidden rounded-2xl border-2 border-gray-400">
               <img src="/profile.jpg" alt="Profile Image" class="absolute top-5 object-cover scale-150" />
             </div>
             <div class="space-y-4">
@@ -159,49 +159,21 @@
               Projects
             </h2>
             <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
-              <div v-for="(value, index) in 8" :key="index"
+              <div v-for="(data, index) in descriptions" :key="index"
                 class="relative w-full lg:hover:mt-[-10px] transition-all duration-700 sm:flex sm:justify-center">
-                <div class="group text-center text-white lg:w-full sm:w-full h-full relative">
+                <div class="group text-white lg:w-full sm:w-full h-full relative">
                   <div
                     class="z-[2] absolute top-0 left-0 sec6card-inner cursor-pointer group rounded-[10px] transition-all duration-[1s]">
                     <div
                       class="z-[2] absolute top-0 left-0 sec6card-inner cursor-pointer group rounded-[10px] transition-all duration-[1s]">
                     </div>
                   </div>
-                  <div class="z-[1] cursor-pointer relative rounded-[10px] overflow-y-hidden">
+                  <div class="z-[1] cursor-pointer relative rounded-[10px] overflow-y-hidden group">
                     <img loading="lazy" class="xl:h-[240px] lg:h-[180px] md:h-[240px] sm:h-[280px] w-full object-cover"
-                      :src="`/imgs/projects/${value}.png`" alt="sarawut portfolio projects" />
-                    <p v-if="value == 1"
-                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
-                      เว็บไซต์บริษัทก่อสร้างถนนสะพานและอุโมงค์
-                    </p>
-                    <p v-if="value == 2"
-                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
-                      เว็บประกาศ ขาย เช่า บ้าน ที่ดิน ภาคเหนือ
-                    </p>
-                    <p v-if="value == 3"
-                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
-                      ระบบจัดการข้อมูลพนักงาน
-                    </p>
-                    <p v-if="value == 4"
-                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
-                      ระบบบันทึกข้อมูลการเงิน
-                    </p>
-                    <p v-if="value == 5"
-                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
-                      เว็บไซต์บริษัทรับออกแบบและการตลาดออนไลน์
-                    </p>
-                    <p v-if="value == 6"
-                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
-                      ระบบจัดการข้อมูลบัญชีบริษัท
-                    </p>
-                    <p v-if="value == 7"
-                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
-                      เว็บไซต์รับทำเว็บไซต์และออกแบบเว็บไซต์
-                    </p>
-                    <p v-if="value == 8"
-                      class="bg-blackMute px-2 py-1 rounded-lg line-clamp-1 z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
-                      เว็บไซต์บริษัทออกแบบพร้อมก่อสร้าง
+                      :src="`/imgs/projects/${index + 1}.png`" alt="sarawut portfolio projects" />
+                    <p
+                      class="bg-blackMute px-2 py-1 rounded-lg z-[3] absolute group-hover:bottom-[15px] bottom-[10px] mx-[10px] transition-all duration-[1s]">
+                      {{ data }}
                     </p>
                   </div>
                 </div>
@@ -261,6 +233,18 @@ const workExperience = reactive([
     year: '2021'
   },
 ]);
+const descriptions = [
+  "เว็บไซต์บริษัทก่อสร้างถนนสะพานและอุโมงค์",
+  "เว็บประกาศ ขาย เช่า บ้าน ที่ดิน ภาคเหนือ",
+  "ระบบจัดการข้อมูลพนักงาน",
+  "ระบบบันทึกข้อมูลการเงิน",
+  "เว็บไซต์บริษัทรับออกแบบและการตลาดออนไลน์",
+  "ระบบจัดการข้อมูลบัญชีบริษัท",
+  "เว็บไซต์รับทำเว็บไซต์และออกแบบเว็บไซต์",
+  "เว็บไซต์บริษัทออกแบบพร้อมก่อสร้าง",
+  "เว็บไซต์เครื่องมือคำนวณ Carbon Footprint",
+  "เว็บไซต์คอมมูนิตี้พูดคุยและรับฟังปัญหาจิตใจ",
+]
 
 </script>
 

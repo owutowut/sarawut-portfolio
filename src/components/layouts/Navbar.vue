@@ -1,7 +1,7 @@
 <template>
   <nav :class="[isScrolled ? 'bg-[#000]' : 'bg-black']"
-    class="z-20 fixed top-0 py-6 h-[65px] w-full flex justify-center transition-colors duration-300">
-    <div class="max-w-[80vw] w-full flex justify-between items-center">
+    class="z-20 fixed top-0 py-6 h-fit w-full flex justify-center transition-colors duration-300">
+    <div class="md:flex max-w-[80vw] w-full justify-between items-center">
       <p><a href="#" class="hover:text-accent text-3xl font-semibold duration-300 uppercase">Portfolio</a></p>
       <ul class="flex space-x-4 uppercase">
         <li><a href="#" class="hover:text-accent transition-colors duration-300 text-lg">About</a></li>
