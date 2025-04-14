@@ -24,8 +24,8 @@ export default {
       },
     },
     screens: {
-      sm: "425px",
-      // => @media (min-width: 425px) { ... }
+      sm: "320px",
+      // => @media (min-width: 320px) { ... }
       md: "768px",
       // => @media (min-width: 768px) { ... }
       lg: "1024px",
