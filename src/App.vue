@@ -98,7 +98,7 @@
                 delay: 2000,
                 disableOnInteraction: false,
               }"
-              :breakpoints="{ 1440: { slidesPerView: 10 }, 1024: { slidesPerView: 7 }, 768: { slidesPerView: 5 }, 425: { slidesPerView: 3 } }">
+              :breakpoints="{ 1440: { slidesPerView: 10 }, 1024: { slidesPerView: 7 }, 768: { slidesPerView: 5 }, 320: { slidesPerView: 3 } }">
               <SwiperSlide v-for="(value, index) in skills" :key="index">
                 <img :src="`/imgs/skills/${value}.png`" :alt="value" loading="lazy">
               </SwiperSlide>
@@ -244,6 +244,7 @@ const descriptions = [
   "เว็บไซต์บริษัทออกแบบพร้อมก่อสร้าง",
   "เว็บไซต์เครื่องมือคำนวณ Carbon Footprint",
   "เว็บไซต์คอมมูนิตี้พูดคุยและรับฟังปัญหาจิตใจ",
+  "ระบบจัดการข้อมูลโรงงานผลิตถุง",
 ]
 
 </script>
