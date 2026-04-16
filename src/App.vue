@@ -7,7 +7,7 @@
           <!-- profile -->
           <div class="md:flex md:space-x-[2rem] md:space-y-0 sm:space-y-8 justify-start items-center">
             <div
-              class="hover-scale relative xl:w-[16rem] xl:h-[16rem] lg:w-2/3 lg:h-[20rem] md:h-[18rem] sm:h-[24rem] w-full overflow-hidden rounded-2xl border-2 border-gray-400">
+              class="hover-scale relative xl:w-[16rem] xl:h-[16rem] lg:w-2/3 lg:h-[22rem] md:h-[20rem] sm:h-[26rem] w-full overflow-hidden rounded-2xl border-2 border-gray-400">
               <img src="/profile.jpg" alt="Profile Image" class="absolute top-5 object-cover scale-150" />
             </div>
             <div class="space-y-4">
