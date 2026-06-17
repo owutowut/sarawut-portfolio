@@ -204,7 +204,7 @@ const skills = ref(['nextjs', 'vue', 'nuxtjs', 'tailwind', 'bootstrap', 'html', 
 const workExperience = reactive([
   {
     company: 'Biscuit Studio',
-    position: 'Front-End Developer',
+    position: 'Software Developer',
     year: '2024'
   },
   {
