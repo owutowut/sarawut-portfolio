@@ -15,7 +15,7 @@
                 Sarawut Bunmee
               </h1>
               <h2 class="text-xl text-gray-400">
-                FWeb Developer
+                Web Developer
               </h2>
               <p>
                 Passionate Web Developer with experience in creating user-friendly web applications. <br>
