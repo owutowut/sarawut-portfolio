@@ -10,7 +10,7 @@
         </p>
       </div>
       <h2 class="hover-scale text-2xl text-gray-400">
-        <a href="#">Front-End Developer</a>
+        <a href="#">Web Developer</a>
       </h2>
       <ul class="flex space-x-4 uppercase">
         <li><a href="#"

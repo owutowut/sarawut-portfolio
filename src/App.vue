@@ -15,10 +15,10 @@
                 Sarawut Bunmee
               </h1>
               <h2 class="text-xl text-gray-400">
-                Front-End Developer
+                FWeb Developer
               </h2>
               <p>
-                Passionate Front-End Developer with experience in creating user-friendly web applications. <br>
+                Passionate Web Developer with experience in creating user-friendly web applications. <br>
                 Proficient in HTML, CSS, JavaScript, Vue, Nuxt, React and Next.js.
                 Eager to learn new skills and contribute effectively to team projects, <br>
                 delivering high-quality solutions that meet user needs.
