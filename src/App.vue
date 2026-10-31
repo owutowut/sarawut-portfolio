@@ -15,10 +15,10 @@
                 Sarawut Bunmee
               </h1>
               <h2 class="text-xl text-gray-400">
-                Full Stack Developer
+                Software Developer
               </h2>
               <p>
-                Passionate Full Stack Developer with experience in creating user-friendly web applications. <br>
+                Passionate Software Developer with experience in creating user-friendly web applications. <br>
                 Proficient in HTML, CSS, JavaScript, Vue, Nuxt, React and Next.js.
                 Eager to learn new skills and contribute effectively to team projects, <br>
                 delivering high-quality solutions that meet user needs.
